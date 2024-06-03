@@ -1,0 +1,6 @@
+
+.form-item{
+    display: flex;
+    justify-content: column;
+    gap: 20px;
+}

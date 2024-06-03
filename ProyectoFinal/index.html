@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Proyecto Final</title>
+        <link rel="stylesheet" href="styles.css" />
+        <link rel="stylesheet" href="styles2.css" />
+      </head>
+    <body>
+        <header>
+            <h1>GameCraft Hub</h1>
+            <div class="contenedor-botones">
+                <button id="boton-bajar"type="button">PRODUCTOS</button>
+                <button onclick="location.href='./paginas/Indicaciones.html'"type="button">INDICACIONES</button>
+                <button onclick="location.href='./paginas/buscador.html'"type="button">BUSCADOR</button>
+                <button onclick="location.href='index.html'"type="button">INICIO</button>
+            </div>
+        </header>
+        
+        <section>
+            <div class="contenedor-imagen">
+                <img src="https://images-ng.pixai.art/images/orig/beee7724-574c-4ed7-9d56-2df395519b09" alt="Vista por encima de la tienda">
+                <div class="texto-superpuesto">
+                    <h1>Vista General de los productos</h1>
+                    <p>En la siguiente vista podrás ver lo que son nuestros productos como tal, en la pagina podras ver hasta 15 de nuestros productos hasta tener que ir a la siguiente pagina</p>
+                </div>
+            </div>
+        </section>
+            
+            <section class="contenedor-seccion">
+                    <div class="seccion-texto">
+                        <h2 ID="PRODUCTOS">Productos</h2>
+                    </div>
+                    <div class="seccion-botones">
+                        <button onclick="location.href='./paginas/buscador.html'"type="button">Buscar en base de datos</button>
+                        <button onclick="location.href='./paginas/Indicaciones.html'"type="button">Registrar nuevo elemento</button>
+                        <input type="text" placeholder="Buscar producto" id="busqueda">
+                    </div>
+            </section>
+            <article>
+            <div class="container" id="productos-container"></div>
+            </article>
+            <section class="pagination">
+                <button id="prev" onclick="prevPage()">Atrás</button>
+                <button id="next" onclick="nextPage()">Siguiente</button>
+            </section> 
+        <footer>
+            <p>GameCraft Hub</p>
+        </footer>
+        <script src="db.js"></script>
+        <script src="index.js"></script>
+    </body>
+</html>

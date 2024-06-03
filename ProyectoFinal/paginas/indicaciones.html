@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Indicaciones</title>
+        <link rel="stylesheet" href="../styles.css" />
+        <link rel="stylesheet" href="../styles2.css" />
+        <link rel="stylesheet" href="../regstyles.css" />
+      </head>
+      <body>
+        <header>
+            <h1>GameCraft Hub</h1>
+            <div class="contenedor-botones">
+                <button onclick="location.href='../paginas/buscador.html'"type="button">BUSCADOR</button>
+                <button onclick="location.href='../paginas/indicaciones.html'"type="button">INDICACIONES</button>
+                <button id="boton-bajar"type="button">REGISTRO</button>
+                <button onclick="location.href='../index.html'"type="button">INICIO</button>
+            </div>
+        </header>
+
+        <section class="contenedor-section">
+            <h1 class="item-section">Indicaciones</h1>
+            <p class="item-section">
+                GameCraft Hub es una empresa dedicada a la venta de artilugios tecnologicos relacionados a todo el mundo del gaming, en esta pagina encontraras a continuacion una forma de registrar un producto en base a sus caracteristicas, un ejemplo de una de nuestras existencias es este:
+            </p>
+            <ul class="item-section">
+                <li>Nombre: Monitor Gamer BenQ Zowie XL2546K</li>
+                <li>Categoria: Monitores Gamer</li>
+                <li>Imagen: Monitor BenQ</li>
+                <li>Codigo: 50</li>
+                <li>Precio: $3,200.000</li>
+                <li>Marca: BenQ</li>
+            </ul>
+            <p class="item-section">Ve a la pagina de registrar productos precionando el siguiente boton:</p>
+            <button id="boton-bajar"class="button-black" type="button">Registro de producto</button>
+        </section>
+
+        <section class="contenedor-section">
+            <h1 ID="PRODUCTOS"class="item-section">Registro del producto</h1>
+            <p class="item-section">En esta vista contaras con distintas funciones para registrar un producto disponible</p>
+        </section>
+        
+        <section>
+          <form id="product-form">
+              <div>
+                  <label for="nombre" >Nombre:</label>
+                  <input type="text" id="nombre" maxlength="20" required placeholder="Nombre del producto">
+              </div>
+              <div>
+                  <label for="categoria">Categoría:</label>
+                  <select id="categoria" required>
+                      <option value="sillas-gamer">Sillas Gamer</option>
+                      <option value="teclados-gamer">Teclados Gamer</option>
+                      <option value="audifonos-gamer">Audífonos Gamer</option>
+                      <option value="mouses-gamer">Mouses Gamer</option>
+                      <option value="monitores-gamer">Monitores Gamer</option>
+                  </select>
+              </div>
+              <div>
+                  <label for="imagen">Imagen URL:</label>
+                  <input type="url" id="imagen" required placeholder="URL de la imagen">
+              </div>
+              <div>
+                  <label for="precio">Precio:</label>
+                  <input placeholder="Precio del producto" type="text" id="precio" pattern="^[0-9]*$" required >
+              </div>
+              <div>
+                  <label for="id">ID:</label>
+                  <input placeholder="ID del producto"type="text" id="id" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d.*\d)[a-zA-Z\d]{8,}$" required>
+              </div>
+              <div>
+                <label for="descripcion">Descripcion:</label>
+                <input placeholder="Descripcion del producto" type="text" id="descripcion">
+            </div>
+            <div>
+                <label for="marca">Marca:</label>
+                <input placeholder="Marca del producto" type="text" id="marca">
+            </div>
+            <div class="form-item">
+              <button type="submit">Registrar</button>
+              <button type="button" onclick="limpiarCampos()">Limpiar Campos</button>
+              <button onclick="location.href='../index.html'"type="submit">Registrar e ir al inicio</button>
+            </div>   
+          </form>
+        </section>
+
+        <footer>
+            <p>GameCraft Hub</p>
+        </footer>
+        
+        <script script src="../db.js"></script>
+        <script script src="../registro.js"></script>
+        <script>
+          function limpiarCampos() {
+              document.getElementById('product-form').reset();
+          }
+      </script>
+      </body>
+</html>

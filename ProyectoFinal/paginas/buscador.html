@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Buscador</title>
+        <link rel="stylesheet" href="../styles.css" />
+        <link rel="stylesheet" href="../styles2.css" />
+      </head>
+      <body>
+        <header>
+            <h1>GameCraft Hub</h1>
+            <div class="contenedor-botones">
+                <button onclick="location.href='../paginas/buscador.html'"type="button">BUSCADOR</button>
+                <button onclick="location.href='../paginas/indicaciones.html'"type="button">INDICACIONES</button>
+                <button onclick="location.href='../paginas/indicaciones.html'"type="button">REGISTRO</button>
+                <button onclick="location.href='../index.html'"type="button">INICIO</button>
+            </div>
+        </header>
+
+        <h1>
+            Buscador de productos
+        </h1>
+        
+        <section class="filter-container">
+            <div class="filters">
+                <select id="filter-type" onchange="updateFilterOptions()">
+                    <option value="">Seleccionar filtro</option>
+                    <option value="categoria">Categoría</option>
+                    <option value="marca">Marca</option>
+                    <option value="precio">Precio</option>
+                </select>
+                <select id="filter-value"></select>
+                <button onclick="addFilter()">Añadir filtro</button>
+                <button onclick="clearFilters()">Limpiar filtros</button>
+            </div>
+        </section>
+        <section>
+        <table id="productos-table">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Precio</th>
+                    <th>Marca</th>
+                    <th>ID</th>
+                    <th>Categoría</th>
+                    <th>Imagen</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </section>
+        <div class="pagination">
+            <button id="prev" onclick="prevPage()">Atrás</button>
+            <button id="next" onclick="nextPage()">Siguiente</button>
+        </div>
+        <div id="centrar">
+            <button  onclick="location.href='../index.html'"class="button-black">Regresar a la vista de productos</button>
+        </div>
+        <footer>
+            <p>GameCraft Hub</p>
+        </footer>
+        <script src="../db.js"></script>
+        <script src="../script2.js"></script>
+      </body>
+</html>
